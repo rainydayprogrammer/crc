@@ -1,0 +1,62 @@
+﻿/* td使用中 */
+.display {
+    color: white;
+    text-align: right;
+    font-size: x-large;
+}
+
+.new-line{
+
+    color:white;
+    overflow-x:hidden;
+}
+
+.keys button {
+    font-family: sans-serif, 'Helvetica Neue', Helvetica, Arial;
+}
+
+
+.calc-card {
+    margin:6px;
+    width:98%;
+    border:solid 1px #eee; 
+    margin-bottom:4px;
+    padding-left: 4px;
+    padding-right:4px;
+}
+.calc-card .line {
+    border-bottom: dashed 1px #eee;
+    padding-top:6px;
+}
+
+.calc-card .line:last-child {
+    border-bottom-style: none;
+}
+
+.calc-card td{
+   padding:6px 6px 4px 6px; 
+}
+
+.icon-box{
+    width:48px;
+    text-align:center;
+}
+
+.history {
+    background-color: #EBDF84;
+}
+
+.current {
+    background-color:white;
+}
+
+.trash {
+    background-color: #9fa0a0;
+}
+
+.paper {
+    margin: 6px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+}
