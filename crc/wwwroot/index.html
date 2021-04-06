@@ -8,7 +8,7 @@
     <base href="/crc/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
-
+    <link href="css/calc.css" rel="stylesheet" />
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
         // Single Page Apps for GitHub Pages
@@ -38,8 +38,20 @@
                 }
             }
         }(window.location))
+//             < !--End Single Page Apps for GitHub Pages-- >
+
+                window.scrollToElementId = (elementId) => {
+                    console.info('scrolling to element', elementId);
+                    var element = document.getElementById(elementId);
+                    if (!element) {
+                        console.warn('element was not found', elementId);
+                        return false;
+                    }
+                    element.scrollIntoView();
+                    return true;
+                }
     </script>
-    <!-- End Single Page Apps for GitHub Pages -->
+
 </head>
 
 <body>

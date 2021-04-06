@@ -1,0 +1,25 @@
+﻿@using lib;
+<table class="calc-card">
+    @foreach (Line line in Card.Lines)
+    {
+        <tr class="line">
+            <td class="icon-box"><button class="btn btn-danger btn-sm" disabled="@IsDisabled" @onclick="() => Card.RemoveLine(line)" title="Remove this Line"><span class="oi oi-circle-x"></span></button></td>
+            <td class="icon-box"><button class="btn btn-light btn-sm" disabled="@IsDisabled" @onclick="() => line.ToggleSign()" title="Change Sign">@line.Sign</button></td>
+            <td>@line.Expression</td>
+            <td style="text-align:right;">@ConvUtil.Decimal2String(line.Result)</td>
+            <td class="icon-box"><button class="btn btn-primary btn-sm" @onclick="() => OnClick.InvokeAsync(ConvUtil.Decimal2String(line.Result))" title="Copy To Current Input"><span class="oi oi-clipboard"></span></button></td>
+        </tr>
+    }
+</table>
+
+@code {
+    [Parameter]
+    public Card Card { get; set; }
+
+    [Parameter]
+    public bool IsDisabled { get; set; }
+
+    [Parameter]
+    public EventCallback<string> OnClick { get; set; }
+
+}
