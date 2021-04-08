@@ -3,12 +3,17 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="mobile-wep-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>crc</title>
     <base href="/crc/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="css/calc.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512x512.png" />
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
         // Single Page Apps for GitHub Pages
@@ -38,18 +43,18 @@
                 }
             }
         }(window.location))
-//             < !--End Single Page Apps for GitHub Pages-- >
+        //             < !--End Single Page Apps for GitHub Pages-- >
 
-                window.scrollToElementId = (elementId) => {
-                    console.info('scrolling to element', elementId);
-                    var element = document.getElementById(elementId);
-                    if (!element) {
-                        console.warn('element was not found', elementId);
-                        return false;
-                    }
-                    element.scrollIntoView();
-                    return true;
-                }
+        window.scrollToElementId = (elementId) => {
+            console.info('scrolling to element', elementId);
+            var element = document.getElementById(elementId);
+            if (!element) {
+                console.warn('element was not found', elementId);
+                return false;
+            }
+            element.scrollIntoView();
+            return true;
+        }
     </script>
 
 </head>
