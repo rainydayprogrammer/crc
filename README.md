@@ -1,16 +1,16 @@
 # CRC (Carriage Return Calculator)
 
-## ‚Í‚¶‚ß‚É
+## ã¯ã˜ã‚ã«
 
-Blazor WebAssembly‚Å‰½‚©ì‚é‚Æ‚È‚Á‚½‚ç‚Ü‚¸‚Í“d‘ì‚Å‚µ‚å‚¤B
+Blazor WebAssemblyã§ä½•ã‹ä½œã‚‹ã¨ãªã£ãŸã‚‰ã¾ãšã¯é›»å“ã§ã—ã‚‡ã†ã€‚
 
-[M+]‚ğ[+&crarr;]‚ÉA[M-]‚ğ[-&crarr;]‚É•Ï‚¦‚Ä‚»‚ê‚¼‚ê‚ÌŒ‹‰Ê‚ğList‚É•Û‘¶‚µList‚Ì—v‘fisj‚ğŒÂ•Ê‚Éíœ‚âƒy[ƒXƒg‚Å‚«‚é‚æ‚¤‚É‚µ‚½‚¾‚¯B
+[M+]ã‚’[+&crarr;]ã«ã€[M-]ã‚’[-&crarr;]ã«å¤‰ãˆã¦ãã‚Œãã‚Œã®çµæœã‚’Listã«ä¿å­˜ã—Listã®è¦ç´ ï¼ˆè¡Œï¼‰ã‚’å€‹åˆ¥ã«å‰Šé™¤ã‚„ãƒšãƒ¼ã‚¹ãƒˆã§ãã‚‹ã‚ˆã†ã«ã—ãŸã ã‘ã€‚
 
-Blazor‚Å—V‚ñ‚Å‚İ‚½‚©‚Á‚½‚¾‚¯‚È‚Ì‚ÅA‚ ‚Ü‚èƒVƒrƒA‚ÈƒeƒXƒg‚Í‚µ‚Ä‚Ü‚¹‚ñB
+Blazorã§éŠã‚“ã§ã¿ãŸã‹ã£ãŸã ã‘ãªã®ã§ã€ã‚ã¾ã‚Šã‚·ãƒ“ã‚¢ãªãƒ†ã‚¹ãƒˆã¯ã—ã¦ã¾ã›ã‚“ã€‚
 
-## “®ìŠm”F
-[https://rainydayprogrammer.github.io/crc/](https://rainydayprogrammer.github.io/crc/counter)
+## å‹•ä½œç¢ºèª
+[https://rainydayprogrammer.github.io/crc/](https://rainydayprogrammer.github.io/crc/)
 
-## Ú‚µ‚¢g‚¢•û
+## è©³ã—ã„ä½¿ã„æ–¹
 
-[Wiki](https://github.com/rainydayprogrammer/crc/wiki)‚ÖiH–’†jB
+[Wiki](https://github.com/rainydayprogrammer/crc/wiki)ã¸ï¼ˆå·¥äº‹ä¸­ï¼‰ã€‚
