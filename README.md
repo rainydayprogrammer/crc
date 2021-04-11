@@ -8,6 +8,8 @@ Blazor WebAssemblyで何か作るとなったらまずは電卓でしょう。
 
 Blazorで遊んでみたかっただけなので、あまりシビアなテストはしてません。
 
+![イメージ](https://raw.githubusercontent.com/wiki/rainydayprogrammer/crc/images/crc000.png "Carriage Return Calculator")
+
 ## 動作確認
 [https://rainydayprogrammer.github.io/crc/](https://rainydayprogrammer.github.io/crc/)
 
