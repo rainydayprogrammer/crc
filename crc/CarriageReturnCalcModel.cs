@@ -50,7 +50,10 @@ public class CarriageReturnCalcModel
     /// </summary>
     public List<Card> Cards { get; set; }
 
-    public Trash Trash { get; set; }
+    /// <summary>
+    /// ゴミ箱
+    /// </summary>
+    public List<ICalcItem> TrashItems { get; set; }
 
     /// <summary>
     /// 数字ボタン押下
@@ -107,9 +110,10 @@ public class CarriageReturnCalcModel
     public void RemoveCard(Card card)
     {
         Cards.Remove(card);
+        TrashItems.Add(card);
     }
 
-    public void Switch2CurrentCard(Card card)
+    public void Switch2CurrentCard(Card card, string vmode)
     {
         // 現在のカードがあればヒストリーへ
         if (CurrentCard.Lines.Count > 0)
@@ -120,8 +124,27 @@ public class CarriageReturnCalcModel
             // コピーしたカードを追加
             Cards.Add(newCard);
         }
-        Cards.Remove(card);
-        CurrentCard = card;
+        if (vmode == "history")
+        {
+            Cards.Remove(card);
+        } else if (vmode == "trash")
+        {
+            TrashItems.Remove(card);
+        }
+            CurrentCard = card;
+    }
+
+    /// <summary>
+    /// ゴミ箱から行を戻す
+    /// </summary>
+    /// <param name="line"></param>
+    public void GotoCurrentCard(Line line)
+    {
+        // 行をCurrentCardに追加
+        CurrentCard.Lines.Add(line);
+
+        // ゴミ箱から消す
+        TrashItems.Remove(line);
     }
 
     /// <summary>
@@ -277,6 +300,14 @@ public class CarriageReturnCalcModel
     }
 
     /// <summary>
+    /// ゴミ箱を空にする
+    /// </summary>
+    public void EmptyTrash()
+    {
+        TrashItems = new List<ICalcItem>();
+    }
+
+    /// <summary>
     /// カード（履歴）、ゴミ箱、全て削除
     /// </summary>
     public void ClearAll()
@@ -306,11 +337,11 @@ public class CarriageReturnCalcModel
         initializePad();
         CurrentCard = new Card();
         Cards = new List<Card>();
-        Trash = new Trash();
+        TrashItems = new List<ICalcItem>();
     }
 }
 
-public class Line
+public class Line: ICalcItem
 {
     /// <summary>
     /// 符号
@@ -333,7 +364,7 @@ public class Line
     }
 }
 
-public class Card
+public class Card: ICalcItem
 {
     public Card()
     {
@@ -356,14 +387,10 @@ public class Card
     /// </summary>
     public List<Line> Lines { get; set; }
 
-    //public void RemoveAtLine(int idx)
-    //{
-    //    Lines.RemoveAt(idx);
-    //}
-
     public void RemoveLine(Line line)
     {
         Lines.Remove(line);
+        
     }
 
     public Decimal GetTotal()
@@ -384,11 +411,8 @@ public class Card
     }
 }
 
-public class Trash
+
+public interface ICalcItem
 {
-    public Trash()
-    {
-        Lines = new List<Line>();
-    }
-    public List<Line> Lines { get; set; }
+    //void GotoTrash();
 }

@@ -3,7 +3,7 @@
     @foreach (Line line in Card.Lines)
     {
         <tr class="line">
-            <td class="icon-box"><button class="btn btn-danger btn-sm" disabled="@IsDisabled" @onclick="() => Card.RemoveLine(line)" title="Remove this Line"><span class="oi oi-circle-x"></span></button></td>
+            <td class="icon-box"><button class="btn btn-danger btn-sm" disabled="@IsDisabled" @onclick="() => OnRemove.InvokeAsync(line)" title="Remove this Line"><span class="oi oi-circle-x"></span></button></td>
             <td class="icon-box"><button class="btn btn-light btn-sm" disabled="@IsDisabled" @onclick="() => line.ToggleSign()" title="Change Sign">@line.Sign</button></td>
             <td>@line.Expression</td>
             <td style="text-align:right;">@ConvUtil.Decimal2String(line.Result)</td>
@@ -20,6 +20,12 @@
     public bool IsDisabled { get; set; }
 
     [Parameter]
+    public List<ICalcItem> Trash { get; set; }
+
+    [Parameter]
     public EventCallback<string> OnClick { get; set; }
+
+    [Parameter]
+    public EventCallback<Line> OnRemove { get; set; }
 
 }
