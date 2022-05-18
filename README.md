@@ -15,4 +15,4 @@ Blazorで遊んでみたかっただけなので、あまりシビアなテス�
 
 ## 詳しい使い方
 
-[Wiki](https://github.com/rainydayprogrammer/crc/wiki)へ（工事中）。
+[Wiki](https://github.com/rainydayprogrammer/crc/wiki)へ。
